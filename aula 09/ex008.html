@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brincando com DOM</title>
+</head>
+<style>
+        body{
+            background-color: rgb(84, 33, 117);/*84, 33, 117*/
+            color: rgb(154, 205, 50);
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color:lightgreen; 
+        }
+        h2{
+            color:lightgreen
+        }
+</style>
+<body>
+    <h1>DOM é uma tecnica de modificar os objetos dentro do documento, sacou?</h1>
+
+    Assim eu escrevo tudo e aparece lá em tempo real
+
+    <p>Além disso, temos quatro estruturas principais:</p>
+    <p><strong>window, document, head e body.</strong></p>
+    
+    <div id = "janela">A window é TODA a janela do site.</div>
+    <div>O document é toda estrutura de conteúdo do meu site, e os outros dois são baseados nele.</div>
+    
+    Estruturados em uma árvore hierárquica, eu consigo selecionar cada elemento de maneira isolada.
+    
+    <h2>Consigo selecionar os elementos por:</h2>
+
+    <p id="tipos">Marca: getElementsByTagName()</br>ID: getElementById()</br>Nome: getElementsByName()</br>Classe: getElementsByClassName()</br>Seletor: querySelector()</br></p>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] // no documento, pega o primeiro objeto do tipo '<p>'
+        document.write(`Esse aq é o primeiro parágrafo: "${p1.innerText}".</br>`)//  .innerText pega só a frase sem o strong, por exemplo. Pra colocar ele, escreve.innerHTML
+        document.write(`Eu poderia mudar de cor com "p1.style.color = 'blue' ", por exemplo, mas isso mudaria o parágrafo original</br></br>`)
+            
+        var win = document.getElementById('janela')
+        document.write(`Esse aq foi por id: "${win.innerText}"</br>`)
+        win.style.background = 'purple' // assim eu mudo só o backgroud da tag
+
+        var p3 = document.querySelector('p#tipos')
+        var p2 = window.document.querySelector('p#tipos') // vai fazer o mesmo que por tag. Se for por classe, vai . ao invés de #
+        p2.style.background = "rgb(154, 205, 50)"
+        p3.style.color = "rgb(180, 5, 180)"
+    </script>
+    
+</body>
+</html>
