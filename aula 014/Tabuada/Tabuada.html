@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="estiloTabuada.css">
+</head>
+<body>
+    <header>
+        <h1>Título</h1>
+    </header>
+
+    <section> <!-- É uma parte da página que tem mais partes dentro -->
+        <div id="valor">
+           <p><input type="number" name="num" id="num"></p>
+           <input type="button" value="Gerar tabuada" onclick="Calc()">
+        </div>
+
+        <div id="tabuada">
+             <select name="Tabuada" id="tabu" size="10"> <!-- ISSO É UMA CAIXA DE SELEÇÃO-->
+              <option>Digite um número acima</option>       <!-- ISSO É UMA OPÇÃO DENTRO DA CAIXA DE SELEÇÃO -->
+             </select> 
+        </div>
+    </section>
+
+    <footer>
+        <p> &copy; Samuel</p>
+    </footer>
+
+    <script src="Tabuada.js"></script>
+
+</body>
+</html>
