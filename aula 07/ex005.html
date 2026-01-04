@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Matemática</title>
+</head>
+<style>
+      body{
+            background-color: rgb(84, 33, 117);
+            color: rgb(69, 156, 65);
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color:lightgreen; 
+        }
+</style>
+<body>
+    <h1>Ó os operadores!</h1>
+    <script>
+        var n1 = parseFloat(window.prompt("Me da um número ai:"))
+        var n2 = parseFloat(window.prompt("Me da um outro número ai:"))
+        document.write("Essas são as operações dos números dados:<br/>")
+        document.write(`${n1} + ${n2} = ${n1+n2}<br/>`)
+        document.write(`${n1} - ${n2} = ${n1-n2}<br/>`)
+        document.write(`${n1} * ${n2} = ${n1*n2}<br/>`)
+        document.write(`${n1} / ${n2} = ${n1/n2}<br/>`)
+        document.write(`${n1} % ${n2} = ${n1%n2}<br/>`)
+        document.write(`${n1} ** ${n2} = ${n1**n2}<br/>`)
+        document.write(`Agora vou incrimentar ambos: ${n1++} --> ${n1}; ${n2++} --> ${n2} <br/>`)
+    </script>
+</body>
+</html>
