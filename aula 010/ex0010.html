@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador de valores</title>
+</head>
+<style>
+
+    div#res{ /* Isso aq vai só alterar a Div de Id 'area' */
+
+        font: normal 25pt Arial;
+        background-color: rgba(221, 184, 135, 0.918);
+        width: 250px; /* Largura */
+       margin-top: 20px;
+        line-height: 50px; /* Posição da linha */
+
+    }
+
+    div#inputs{
+        text-align: center;
+        width: 1100px;
+    }
+
+    div#soma{
+        text-align: center;
+        background-color: rgba(221, 204, 135, 0.918);
+        width: 250px; /* Largura */
+        line-height: 50px; /* Posição da linha */
+    }
+
+    body{
+
+        background-color : rgba(113, 0, 0, 0.926);
+        color:chocolate;
+       
+    }
+
+    h1{
+        text-align: center ;
+        background-color:rgba(38, 10, 5, 0.645) ;
+        color: chocolate;
+        width: 1100px;
+    }
+
+    
+</style>
+<body>
+
+    <h1>Somador de valor:</br></h1>
+   
+    <div id="inputs">
+
+        <!-- Inputs são caixas para colocar valores dentro do HTML -->
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="somar" onclick="somar()">
+
+    </div>
+    
+    
+
+    <div id="res" > O resultado é:</div>
+
+    <div id="soma">
+
+    </div>
+
+    <script>
+
+        var a = window.document.getElementById('res')
+        var b = document.getElementById('soma')
+        
+       function formato(a){
+            a.style.font = "normal 28pt Arial"
+            a.style.textAlign = "300px"
+            a.style.lineHeight = "300px"
+        }
+
+
+        function somar(){
+            var tn1 = document.getElementById('txtn1') // pega o texto da caixa de texto
+            var tn2 = document.getElementById('txtn2')
+            var n1 = Number.parseInt(tn1.value) // transforma em numero
+            var n2 = Number.parseInt(tn2.value)
+            var s = n1+n2
+            b.innerHTML = (`${s}`)
+        }
+
+
+        
+
+
+    </script>
+</body>
+</html>

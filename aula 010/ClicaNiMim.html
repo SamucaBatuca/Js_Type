@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clica Ni Mim</title>
+</head>
+<style>
+
+    div#area{ /* Isso aq vai só alterar a Div de Id 'area' */
+
+        font: normal 50pt Arial;
+        background-color: rgba(221, 184, 135, 0.918);
+        width: 400px; /* Largura */
+        height: 400px; /* Altura */
+        text-align: 400px; /* Alinhamento */
+        line-height: 400px; /* Posição da linha */
+
+    }
+
+    body{
+
+        background-color : rgba(113, 0, 0, 0.926);
+        color:chocolate;
+        text-align: center; /* Alinhamento do Texto */
+    }
+
+    h1{
+        background-color:rgba(38, 10, 5, 0.645) ;
+        color: chocolate;
+        width: 400px;
+    }
+
+    
+</style>
+<body>
+
+    <h1>⬇️Clica Nele</h1>
+    
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()"> <!-- 'Onclick' e 'Onmouseenter' é o método de disparo de um evento -->
+        Clica ni mim!
+    </div>
+
+    <script>
+        
+        function clicar(){ // função só vai ser executada quando o método "clicar" for acionado
+            var a = window.document.getElementById('area')
+            a.style.font = "50pt Arial"
+            a.style.textAlign = "400px"
+            a.style.lineHeight = "400px"
+            a.innerHTML = "🫵 &#128405"
+        }
+
+        function entrou(){
+            var a = window.document.getElementById('area')
+            a.style.font = "45pt Arial"
+            a.style.textAlign = "400px"
+            a.style.lineHeight = "400px"
+            a.innerHTML = "Vai, clica, pfv..."
+        }
+
+        function saiu(){
+            var a = window.document.getElementById('area')
+            a.style.font = "normal 50pt Arial"
+            a.style.textAlign = "400px"
+            a.style.lineHeight = "400px"
+            a.innerHTML= "Clica ni mim!"
+
+        }
+    </script>
+</body>
+</html>
