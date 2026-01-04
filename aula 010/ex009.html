@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos do DOM</title>
+</head>
+<style>
+
+    div#area{ /* Isso aq vai só alterar a Div de Id 'area' */
+
+        font: normal 30pt Arial;
+        background-color: rgba(221, 184, 135, 0.918);
+        width: 300px; /* Largura */
+        height: 300px; /* Altura */
+        text-align: 300px; /* Alinhamento */
+        line-height: 300px; /* Posição da linha */
+
+    }
+
+    body{
+
+        background-color : rgba(113, 0, 0, 0.926);
+        color:chocolate;
+        text-align: center; /* Alinhamento do Texto */
+    }
+
+    h1{
+        background-color:rgba(38, 10, 5, 0.645) ;
+        color: chocolate;
+        width: 1100px;
+    }
+
+    
+</style>
+<body>
+
+    <h1>Salve</h1>
+
+    <div id="area" >
+        Clica ni mim!
+    </div>
+
+    <script>
+        
+        var a = window.document.getElementById('area')
+
+        // os 'EventListener' são sensores que sabem quando houve uma interação com aquele objeto
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou) //'Onclick' e 'Onmouseenter' é o método de disparo
+        a.addEventListener('mouseout', saiu)
+
+        function formato(a){
+            a.style.font = "normal 28pt Arial"
+            a.style.textAlign = "300px"
+            a.style.lineHeight = "300px"
+        }
+
+        function clicar(){ // função só vai ser executada quando o método "clicar" for acionado
+            
+            formato(a)
+            a.innerHTML = "Clicou!"
+        }
+
+        function entrou(){
+            formato(a)
+            a.innerHTML = "Vai, clica ai, pfv..."
+        }
+
+        function saiu(){
+            formato(a)
+            a.innerHTML= "Clica ni mim!"
+
+        }
+
+    </script>
+</body>
+</html>
