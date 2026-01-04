@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olha a soma</title>
+    <style>
+        body{
+            background-color: rgb(84, 33, 117);
+            color: rgb(69, 156, 65);
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color:lightgreen; /* Comentário CSS */
+        }
+    </style>
+</head>
+<body>
+    <h1>Ta soma ou concatenando?</h1> <!-- Comentário HTML-->
+    <p> Me diz ai, tu concatenou ne?</p>
+
+    <script>
+        var n1 = Number.parseInt(window.prompt('Me diz um número')) // window.prompt retorna valores STRING
+        var n2 = Number.parseInt(window.prompt('Me da outro numero'))// para resolver, usa numeber.parseInt/Float 
+        var s = Number(n1+n2) //number, parseInt, parseFloat, esses ai já resolvem
+
+
+        s = s.toString() //to transfomando em string. Tambem funciona para "Sting(s)"
+        
+
+        window.alert('A soma dos valores é '+s) // É assim que adiciona variáveis em prints de string
+        window.alert(`Assim eu escrevo '${s}' formatado`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição Numérica</title>
+    <style>
+        body{
+            background-color: rgb(84, 33, 117);
+            color: rgb(69, 156, 65);
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color:lightgreen; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Ta curioso pra ver os números, é?</h1> 
+    <p> Dá um liga ai:</p>
+
+    <script>
+        var n1 = Number.parseFloat(window.prompt('Me diz um número ai pra eu exibir')) 
+        document.write(`Assim é com casa decimal: ${n1.toFixed(2)}<br/>`)
+        document.write(`Assim é em BRL: ${n1.toLocaleString('pt-BR', {style : 'currency', currency: 'BRL'})}<br/>`)
+        document.write(`Assim é em DOL: ${n1.toLocaleString('pt-BR', {style : 'currency', currency: 'USD'})}<br/>`)
+        document.write(`Assim é em EUR: ${n1.toLocaleString('pt-BR', {style : 'currency', currency: 'EUR'})}<br/>`)
+    </script>
+    </script>
+</body>
+</html>
