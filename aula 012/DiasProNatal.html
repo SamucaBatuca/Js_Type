@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias pro Natal</title>
+</head>
+
+<style>
+
+    body{
+        background-color: rgb(179, 45, 54);
+        font: normal 45pt Times;
+        color: rgb(253, 253, 253);
+        height: 100vh;
+        display: flex; /* aplica a propriedade do display flex em todos os itens filhos */
+        align-items: center; /* alinha os itens no eixo Y*/
+        justify-content: center; /* justifica os itens no eixo X */
+    }
+
+    div#Alerta{
+       background-color: black;
+       /*display: block;*/
+       width: 500px;
+      /* position: absolute;
+       margin-top: 10%;
+       left:50%;
+       transform: translatex(-50%); /* centraliza a imagem 50% pra esquerda do "eixo" da imagem */
+       /*margin-right: auto;
+       margin-left: auto;*/
+    }
+
+
+
+
+</style>
+
+
+
+
+<body>
+
+    <div id="Alerta">
+        
+    </div>
+
+
+    <script>
+        
+
+
+        var agora = new Date()
+        var ano = agora.getFullYear()
+        var mes = agora.getMonth()
+        var dia = agora.getDate()
+        var final
+        var mensagem = document.getElementById('Alerta')
+
+        if(ano % 4 == 0 || ano % 10 == 0 && ano % 400 == 0){
+            var baseSec = 31017600
+            var calDia = dia * 86400
+            if(mes != 11){
+                var calMes = (mes-1) * 2592000
+                var total = calMes + calDia
+                final = total - baseSec
+            } else{
+                final = (25*86400) - calDia 
+            }
+            
+            
+        } else {
+            var baseSec = 30931200 
+            var calDia = dia * 86400
+            if(mes != 11){
+                var calMes = (mes-1) * 2592000
+                var total = calMes + calDia
+                final = total - baseSec
+            } else{
+                final = (25*86400) - calDia
+            }
+        }
+
+        if(final > 0){ // ainda n é natal
+            dia = final/86400
+            mensagem.innerHTML = `<strong>FALTAM ${dia} DIA(S) PARA O NATAL!<strong>`
+        }else if (final == 0){
+            mensagem.innerHTML = `<strong>HOJE É NATAL!<strong>`
+        } else {
+            mensagem.innerHTML = `<strong>O NATAL JÁ PASSOU!<strong>`
+        }
+
+
+    </script>
+</body>
+</html>
