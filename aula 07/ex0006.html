@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores lógicos</title>
+</head>
+<style>
+      body{
+            background-color: rgb(84, 33, 117);
+            color: rgb(69, 156, 65);
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color:lightgreen; 
+        }
+</style>
+<body>
+    <h1>Ó a relação dos outros operadores:</h1>
+    <script>
+        var n1 = window.prompt("Me da um número ai:")
+        var n2 = parseFloat(window.prompt("Me da um outro número ai:"))
+        document.write("Essas são relações lógicas dos seus números:<br/>")
+        document.write(`${n1} > ${n2} ? Resposta:  ${n1>n2}<br/>`)
+        document.write(`${n1} < ${n2} ? Resposta:  ${n1<n2}<br/>`)
+        document.write(`${n1} >= ${n2} ? Resposta:   ${n1>=n2}<br/>`)
+        document.write(`${n1} <= ${n2} ? Resposta:   ${n1<=n2}<br/>`)
+        document.write(`${n1} == ${n2} ? Resposta:  ${n1==n2}<br/>`)
+        document.write(`${n1} != ${n2} ? Resposta:  ${n1!=n2}<br/>`)
+
+        document.write(`<br/>Agora vou testar a igualdade restrita:<br/>`)
+        var a = n1
+        n1 = parseFloat(n1)
+        document.write(`${n1} == '${a}' ? Resposta:  ${n1 == a}<br/>`)
+        document.write(`${n1} === '${a}' ? Resposta:  ${n1 === a}<br/>`) // igualdade restrita é pro mesmo tipo
+        document.write(`${n1} !== '${a}' ? Resposta:  ${n1 !== a}<br/>`)
+
+    </script>
+</body>
+</html>

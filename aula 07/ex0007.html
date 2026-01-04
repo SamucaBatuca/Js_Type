@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Ternários</title>
+</head>
+<style>
+      body{
+            background-color: rgb(84, 33, 117);
+            color: rgb(69, 156, 65);
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color:lightgreen; 
+        }
+</style>
+<body>
+    <h1>Ó como funciona os ternários:</h1>
+    <script>
+        var n1 = window.prompt("Me da um número ai:")
+        var n2 = parseFloat(window.prompt("Me da um outro número ai:"))
+        document.write("A base é: 'relação ? true : false'<br/>")
+        document.write("<br/><br/>Essas são relações ternárias dos seus números:<br/>")
+        
+        document.write(`${n1} > ${n2} ? Resposta:  ${n1>n2 ?'sim':'não'}<br/>`)
+        document.write(`${n1} < ${n2} ? Resposta:  ${n1<n2 ?'sim':'não'}<br/>`)
+        document.write(`${n1} >= ${n2} ? Resposta:   ${n1>=n2 ?'sim':'não'}<br/>`)
+        document.write(`${n1} <= ${n2} ? Resposta:   ${n1<=n2 ?'sim':'não'}<br/>`)
+        document.write(`${n1} == ${n2} ? Resposta:  ${n1==n2 ?'sim':'não'}<br/>`)
+        document.write(`${n1} != ${n2} ? Resposta:  ${n1!=n2 ?'sim':'não'}<br/>`)
+        document.write(`Se o primeiro número for par, agora ele vale 2: ${n1%2 == 0? 2:n1}<br/>`)
+
+        document.write(`<br/>Agora vou testar a igualdade restrita:<br/>`)
+        var a = n1
+        n1 = parseFloat(n1)
+        document.write(`${n1} == '${a}' ? Resposta:  ${n1 == a ?'sim':'não'}<br/>`)
+        document.write(`${n1} === '${a}' ? Resposta:  ${n1 === a ?'sim':'não'}<br/>`) // igualdade restrita é pro mesmo tipo
+        document.write(`${n1} !== '${a}' ? Resposta:  ${n1 !== a ?'sim':'não'}<br/>`)
+
+    </script>
+</body>
+</html>
