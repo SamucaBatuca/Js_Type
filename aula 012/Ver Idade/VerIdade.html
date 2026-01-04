@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Idade</title>
+    <link rel="stylesheet" href="estiloVerIdade.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div id="um">
+
+            <p>Por favor, insira o seu ano de nascimento:</p>
+            <input type="number" name="idade" id="idade" min="1905">
+            <p>Sexo:
+                <input type="radio" name="radsex" id="masc" checked> <!-- Coloca Bolinha de seleção marcada -->
+                <label for="masc">Masculino</label> <!-- Coloca um texto no ID colocado em "for" -->
+                <input type="radio" name="radsex" id="fem"><!-- Botões com o msm nome para se marcar apenas um deles-->
+                <label for="fam">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="Verificar()">
+            </p>
+
+        </div>
+
+        <div id="dois">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+
+    <footer>
+        <p> &copy; Samuel</p>
+    </footer>
+
+    <script src="VerIdade.js"></script>
+
+</body>
+</html>
